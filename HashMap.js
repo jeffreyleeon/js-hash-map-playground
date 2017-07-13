@@ -5,15 +5,17 @@ class HashMap {
   }
 
   get(key) {
-    return key;
+    var hashedKey = this.hash(key);
+    return this._data[hashedKey];
   }
 
   set(key, value) {
-     
+    var hashedKey = this.hash(key);
+    this._data[hashedKey] = value;
   }
 
-  hash(value) {
-    return value;
+  hash(key) {
+    return key;
   }
 }
 
